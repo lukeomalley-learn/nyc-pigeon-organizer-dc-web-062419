@@ -5,10 +5,12 @@ def nyc_pigeon_organizer(data)
       names.each do |name|
         if pigeon_list[name]
           if pigeon_list[name][trait.to_sym]
-            pigeon_list[name][trait.to_sym] << details.to_s
+            if !pigeon_list[name][trait.to_sym].include?(details)
+              pigeon_list[name][trait.to_sym] << details.to_s
+            end
           else
             pigeon_list[name][trait.to_sym] = []
-            pigeon_list[name][trait.to_sym] << details.to_sym
+        
           end
         else
           pigeon_list[name] = {}
