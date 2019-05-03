@@ -12,7 +12,8 @@ def nyc_pigeon_organizer(data)
         end
         
         if !pigeon_list[name][trait.to_sym].include?(details)
-          pigeon_list[name][trait.to_sym] << details.to_s
+          pigeon_list[name][trait.to_sym] << details.to_sym
+        end
       end
     end
   end
