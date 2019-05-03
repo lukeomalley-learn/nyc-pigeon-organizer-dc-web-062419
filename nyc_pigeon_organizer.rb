@@ -8,6 +8,7 @@ def nyc_pigeon_organizer(data)
         end
         
         if pigeon_list[name].has_key?(trait)
+          pigeon_list[name][trait.to_sym]
       end
     end
   end
