@@ -8,9 +8,22 @@ def nyc_pigeon_organizer(data)
             pigeon_list[name][trait.to_sym] << details.to_s
           else
             pigeon_list[name][trait.to_sym] = []
+            pigeon_list[name][trait.to_sym] << details.to_sym
           end
         else
           pigeon_list[name] = {}
+        end
+        
+        if !pigeon_list.has_key?(name)
+          pigeon_list[name] = {}
+        end
+        
+        if !pigeon_list[name].has_key?(trait)
+          pigeon_list[name][trait.to_sym] = []
+        end
+        
+        if !pigeon_list[name][trait.to_sym].include?(details)
+          pigeon_list[name][trait.to_sym] << details.to_s
         end
       end
     end
