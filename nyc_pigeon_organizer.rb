@@ -3,11 +3,11 @@ def nyc_pigeon_organizer(data)
   data.each do |trait, trait_data|
     trait_data.each do |details, names|
       names.each do |name|
-        if pigeon_list.has_key?(name)
+        if !pigeon_list.has_key?(name)
           pigeon_list[name] = {}
         end
         
-        if pigeon_list[name].has_key?(trait)
+        if !pigeon_list[name].has_key?(trait)
           pigeon_list[name][trait.to_sym] = []
         end
         
