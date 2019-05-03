@@ -5,11 +5,9 @@ def nyc_pigeon_organizer(data)
       names.each do |name|
         if pigeon_list.has_key?(name)
           pigeon_list[name] = {}
-        else
-          pigeon_list[name] = {
-            trait.to_sym => details
-          }
         end
+        
+        if pigeon_list[name].has_key?(trait)
       end
     end
   end
