@@ -11,7 +11,7 @@ def nyc_pigeon_organizer(data)
           pigeon_list[name][trait.to_sym] = []
         end
         
-        if 
+        if !pigeon_list[name][trait.to_sym].include?(details)
       end
     end
   end
